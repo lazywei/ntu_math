@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Language" content="zh-tw" />
+    <title>2013 台大數學營 管理介面</title>
+
+    <%= stylesheet_link_tag    "application.css" %>
+    <%= javascript_include_tag "application.js" %>
+    <%= csrf_meta_tags %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+    </style>
+    <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
+  </head>
+
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <%= link_to "後台首頁", admin_news_index_path, :class => "brand" %>
+          <%= link_to "2013 台大數學營", root_path, :class => "brand" %>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li>
+                <%= link_to_unless_current "最新消息", admin_news_index_path %>
+              </li>
+            </ul>
+          </div>
+          <!--/.well -->
+        </div>
+        <!--/span-->
+        <div class="span9">
+          <%- flash.each do |k, message| %>
+            <div class="alert fade in alert-<%=k%>">
+              <a href="#" class="close" data-dismiss="alert">x</a>
+              <%= message %>
+            </div>
+          <% end %>
+          <%= yield %>
+        </div>
+        <!--/span-->
+      </div>
+      <!--/row-->
+      <hr>
+      <footer>
+      <p>&copy; NTU Math 2013</p>
+      </footer>
+    </div>
+  </body>
+</html>
