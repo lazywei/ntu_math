@@ -29,7 +29,8 @@ $(document).on('nested:fieldAdded', function(event){
   // it's a jQuery object already! Now you can find date input
   // var dateField = field.find('.date');
   // dateField.datepicker(); // and activate datepicker on it
-})$(document).ready(function() {
+});
+$(document).ready(function() {
   $('.datepicker').datepicker({
     dateFormat: "yy-mm-dd"
   });

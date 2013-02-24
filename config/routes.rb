@@ -1,8 +1,10 @@
 # -*- encoding : utf-8 -*-
 NtuMath::Application.routes.draw do
+  root :to => 'welcome#index'
+
   devise_for :users
 
-  root :to => 'welcome#index'
+  resources :news, :only => [:index, :show]
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

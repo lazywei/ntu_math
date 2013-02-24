@@ -1,0 +1,7 @@
+<h1>最新消息</h1>
+
+<ul>
+<% @news.each do |news| %>
+  <li><%= link_to news.title, news %></li>
+<% end %>
+<ul>
