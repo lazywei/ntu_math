@@ -49,6 +49,12 @@ GEM
       erubis (>= 2.7.0)
     binding_of_caller (0.6.8)
     builder (3.0.4)
+    capistrano (2.13.5)
+      highline
+      net-scp (>= 1.0.0)
+      net-sftp (>= 2.0.0)
+      net-ssh (>= 2.0.14)
+      net-ssh-gateway (>= 1.1.0)
     coderay (1.0.8)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -66,6 +72,7 @@ GEM
     execjs (1.4.0)
       multi_json (~> 1.0)
     high_voltage (1.2.1)
+    highline (1.6.15)
     hike (1.2.1)
     i18n (0.6.1)
     journey (1.0.4)
@@ -89,6 +96,13 @@ GEM
     multi_json (1.6.1)
     mysql2 (0.3.11)
     nested_form (0.3.1)
+    net-scp (1.0.4)
+      net-ssh (>= 1.99.1)
+    net-sftp (2.0.5)
+      net-ssh (>= 2.0.9)
+    net-ssh (2.6.3)
+    net-ssh-gateway (1.1.0)
+      net-ssh (>= 1.99.1)
     orm_adapter (0.4.0)
     polyglot (0.3.3)
     pry (0.9.11.4)
@@ -160,6 +174,7 @@ DEPENDENCIES
   annotate
   better_errors
   binding_of_caller
+  capistrano
   coffee-rails (~> 3.2.1)
   devise (~> 2.1.2)
   high_voltage
