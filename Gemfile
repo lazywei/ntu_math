@@ -58,3 +58,5 @@ gem 'nested_form'
 gem 'mysql2'
 
 gem 'anjlab-bootstrap-rails', '>= 2.3', :require => 'bootstrap-rails'
+
+gem 'jquery-ui-rails', '~> 4.0.1'
