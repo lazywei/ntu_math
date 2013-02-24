@@ -1,0 +1,16 @@
+development: &default
+  adapter: mysql2
+  encoding: utf8
+  database: ntu_math_development
+  host: localhost
+  username: 'root'
+  password: ''
+
+test: &TEST
+  <<: *default
+  database: ntu_math_test
+
+production:
+  <<: *default
+  database: ntu_math_production
+
