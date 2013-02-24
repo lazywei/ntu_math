@@ -56,3 +56,5 @@ gem 'simple_form', '~> 2.0.4'
 gem 'nested_form'
 
 gem 'mysql2'
+
+gem 'anjlab-bootstrap-rails', '>= 2.3', :require => 'bootstrap-rails'
