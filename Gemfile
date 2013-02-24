@@ -60,3 +60,5 @@ gem 'mysql2'
 gem 'anjlab-bootstrap-rails', '>= 2.3', :require => 'bootstrap-rails'
 
 gem 'jquery-ui-rails', '~> 4.0.1'
+
+gem 'devise', '~> 2.1.2'
