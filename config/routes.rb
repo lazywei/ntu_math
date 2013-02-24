@@ -6,6 +6,7 @@ NtuMath::Application.routes.draw do
 
   resources :news, :only => [:index, :show]
   namespace :admin do
+    root :to => 'news#index'
     resources :news
   end
   # The priority is based upon order of creation:
