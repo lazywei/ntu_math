@@ -22,6 +22,14 @@
         padding: 9px 0;
       }
     </style>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=317736408339264";
+      fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
     <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
   </head>
 
@@ -30,6 +38,7 @@
       <div class="navbar-inner">
         <div class="container-fluid">
           <%= link_to "2013 台大數學營", root_path, :class => "brand" %>
+              <div class="fb-like" data-href="<%= root_url %>" data-send="true" data-layout="button_count" data-width="450" data-show-faces="true"></div>
         </div>
       </div>
     </div>
@@ -39,16 +48,16 @@
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li>
-                <%= link_to_unless_current "最新消息", news_index_path %>
+              <%= link_to_unless_current "最新消息", news_index_path %>
               </li>
               <li>
-                <%= link_to_unless_current "營隊介紹", page_path("about") %>
+              <%= link_to_unless_current "營隊介紹", page_path("about") %>
               </li>
               <li>
-                <%= link_to_unless_current "我要報名", page_path("registration") %>
+              <%= link_to_unless_current "我要報名", page_path("registration") %>
               </li>
               <li>
-                <%= link_to_unless_current "聯絡方式", page_path("contact") %>
+              <%= link_to_unless_current "聯絡方式", page_path("contact") %>
               </li>
             </ul>
           </div>
@@ -68,17 +77,17 @@
       </div>
       <!--/row-->
       <hr>
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-0529325452859575";
-/* NTU Math */
-google_ad_slot = "6354911720";
-google_ad_width = 728;
-google_ad_height = 90;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
+      <script type="text/javascript"><!--
+        google_ad_client = "ca-pub-0529325452859575";
+        /* NTU Math */
+        google_ad_slot = "6354911720";
+        google_ad_width = 728;
+        google_ad_height = 90;
+        //-->
+      </script>
+      <script type="text/javascript"
+        src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+      </script>
       <footer>
       <p>&copy; NTU Math 2013</p>
       </footer>
