@@ -14,10 +14,18 @@ class NewsController < ApplicationController
   # GET /news/1.json
   def show
     @news = News.find(params[:id])
+    data = {
+      :title => @news.title,
+      :id => @news.id,
+      :content => @news.content,
+      :content_html => @news.content_html,
+      :created_at => @news.created_at,
+      :updated_at => @news.updated_at
+    }
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @news }
+      format.json { render json: data.to_json }
     end
   end
 end
