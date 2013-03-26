@@ -1,0 +1,27 @@
+<h1>報名資訊</h1>
+
+<table class="table table-striped table-bordered table-condensed">
+  <tr>
+    <th>姓名</th>
+    <th>學校</th>
+    <th>日期</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @admin_registrations.each do |admin_registration| %>
+  <tr>
+    <td><%= admin_registration.name %></td>
+    <td><%= admin_registration.school %></td>
+    <td><%= admin_registration.registe_date %></td>
+    <td><%= link_to '檢視', [:admin, admin_registration] %></td>
+    <td><%= link_to '編輯', edit_admin_registration_path(admin_registration) %></td>
+    <td><%= link_to '刪除', [:admin, admin_registration], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to '新增報名資訊', new_admin_registration_path %>

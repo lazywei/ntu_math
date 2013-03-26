@@ -5,9 +5,11 @@ NtuMath::Application.routes.draw do
   devise_for :users
 
   resources :news, :only => [:index, :show]
+  resources :registrations, :only => [:index]
   namespace :admin do
     root :to => 'news#index'
     resources :news
+    resources :registrations
   end
   # The priority is based upon order of creation:
   # first created -> highest priority.
