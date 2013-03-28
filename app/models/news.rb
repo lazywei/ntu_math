@@ -1,5 +1,6 @@
 class News < ActiveRecord::Base
   attr_accessible :content, :title
+  default_scope order('created_at DESC')
   auto_html_for :content do 
     html_escape
     image
