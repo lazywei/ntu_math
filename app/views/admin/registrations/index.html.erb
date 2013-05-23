@@ -5,6 +5,7 @@
     <th>姓名</th>
     <th>學校</th>
     <th>日期</th>
+    <th>是否已繳費</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,6 +16,7 @@
     <td><%= admin_registration.name %></td>
     <td><%= admin_registration.school %></td>
     <td><%= admin_registration.registe_date %></td>
+    <td><%= admin_registration.paid %></td>
     <td><%= link_to '檢視', [:admin, admin_registration] %></td>
     <td><%= link_to '編輯', edit_admin_registration_path(admin_registration) %></td>
     <td><%= link_to '刪除', [:admin, admin_registration], method: :delete, data: { confirm: 'Are you sure?' } %></td>
